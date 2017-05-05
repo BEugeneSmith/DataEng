@@ -1,5 +1,4 @@
 from selenium.webdriver import Chrome
-from selenium.webdriver.common.action_chains import ActionChains
 import time, unittest
 
 class test_uptake(unittest.TestCase):
@@ -45,6 +44,7 @@ class test_uptake(unittest.TestCase):
         self.assertTrue(self.success)
 
     def test_products(self):
+        # navigate to the industries page, then go to contact
         driver = self.driver
         driver.get(self.homepage)
         driver.maximize_window()
@@ -57,7 +57,6 @@ class test_uptake(unittest.TestCase):
 
     def tearDown(self):
         self.driver.quit()
-
 
 if __name__ == '__main__':
     unittest.main()
